@@ -1,0 +1,306 @@
+<!DOCTYPE>
+<html>
+	<head>
+	<title>CN</title>
+	<!--<style type="text/css">
+            #MyList li ol li{display:none;}
+            #MyList li:hover ol li{display:block;}
+            #MyUl li:hover ul li ul li{display:none;}
+            #MyUl li ul li:hover ul li{display:block;}
+        </style> -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<!--jQuery library-->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<!-- Popper JS -->
+			 <style type="text/css">
+				ul li ol{
+				 display:none;
+				}
+			 </style>
+		<script type="text/javascript">
+			$(document).ready(function ()
+			{
+			$("ul li").click(function(){
+				$(this).find("ol").toggle();
+			});	
+		});
+		
+		$(document).ready(function ()
+			{
+			$("ul li").click(function(){
+				$(this).find("ul").toggle();
+			});	
+		});
+ </script>
+	</head>
+	<body bgcolor="#3b64a5" >
+	<h1 color="white">CN</h1><hr />
+	<ul id="MyList" >
+	
+	<img class="img-responsive" src="cn/nic.jpg" height="500px" width="600px"/>
+		<li>IP Address <--from Domain name converted to IP by DNS
+			<ol>
+				<li>IP (N/W id | Host id)</li>
+				<li>Socket (IP and Port)</li>
+				<li>to reach that process (of host )we need port number (web service por no :80)</li>
+				<li>IP Renge<-Class A,B,C,D,E</li>
+				<li>
+					<img class="img-responsive" src="cn/Ipv4NetClasses.png"/>
+				</li>
+			</ol>
+		</li>
+		<li>ipconfig/all</li>
+		<li>DNS(Port 53)/DHCP (port 67CP/68SP)<- Both works on client-server architecture </li>
+		<li>Propagation Delay<-Amount of time taken by a packet to make a physical journey from one router to another router.</br>
+			<b>Propagation Delay = (Distance between routers) / (Velocity of propagation)</br>
+			RoundTripTime (RTT) = 2* Propagation Delay</br>
+			TimeOut (TO) =  2* RTT</br>
+			Time To Live (TTL) = 2* TimeOut. (Maximum TTL is 180 seconds)</b></li>
+		<li>Transmission Delay<-- The time required to put data bits on the wire/communication medium. T = Data Size/ Bandwidth
+				<ol>
+				<li>Transmission_Delay
+					<img class="img-responsive" src="cn/Transmission_Delay.png"/>
+				</li>
+			</ol>
+		<li>Physical addr</li>
+		<li>Port Number<-- session is managed by port number for ex: facebook site and facebook massenger
+			<ol>
+				<li>DNS</li>
+				<li>DHCP</li>
+				<li>FTP</li>
+				<li>SMTP</li>
+				<li>List of port number
+					<img class="img-responsive" src="cn/ListOfPortNumber.png"/>
+				</li>
+			</ol>
+		</li>
+		<li>Socket<-- combi. of ip and port</li>
+		
+		<li>Protocol (Defines How, What, When it Communicated)
+			<ol>
+				<li>SMTP
+					<img class="img-responsive" src="cn/smtp.png"/>
+				</li>
+				<li>FTP
+					<img class="img-responsive" src="cn/ftp.jpg"/>
+				</li>			
+						
+			</ol>
+		</li>
+		<li>SNMP(Simple Network Management Protocol)</li>	
+		<li>Network
+			<ol>Network Area
+				<li>LAN</li>
+				<li>MAN</li>
+				<li>WAN</li>
+				<li>PAN (Personal)</li>
+				<li>CAN (Campus)</li>
+			</ol>
+			<ol>Type
+				<li>Super-netting</li>
+				<li>Sub-netting</li>
+			</ol>
+			<ol>Network Devices
+				<li>Repeater</li>
+				<li>Hub</li>
+				<li>Bridge</li>
+				<li>Switch</li>
+				<li>Router</li>
+				<li>Gateway</li>
+				<li>Brouter</li>
+			</ol>
+		</li>
+		<li>Con O & Con Less
+			<ol>
+				<li>CO
+					<img class="img-responsive" src="cn/co.jpg"/>
+				</li>
+				<li>CL
+					<img class="img-responsive" src="cn/cl.jpg"/>
+				</li>
+				<li>TCP vs UDP
+					<img class="img-responsive" src="cn/tcpudp.jpeg"/>
+				</li>
+			</ol>
+		</li>
+		<li>Topology
+			<ol>
+				<li>Bus</li>
+				<li>Tree</li>
+				<li>Star</li>
+				<li>Ring</li>
+				<li>Mesh</li>
+				<li>Hybrid(Two or more diff net topo)</li>
+				<li>
+					<img class="img-responsive" src="cn/topology.jpg"/>
+				</li>
+			</ol>
+		</li>
+		<li>OSI Layer
+			<ol><B>
+				<li>Layer 7 - Application (PDU="DATA")<-Browser, Messanger,FTP,SMTP,HTTP</li>
+				<li>Layer 6 - Presentation (PDU="DATA")<--Transaltion(Common Format),Encry-Decryp,Comp,De-comp</li>
+				<li>Layer 5 - Session (PDU="DATA")<--Esta,maintain,terminate, + Dailog Contol+ Synchronization</li>
+				<li>Layer 4 - Transport (PDU="SEGMENT")<--(TCP/UDP) End to and Deli. , Segmentation-Reassemble(Seq no.),Flow/Error Control</li>
+				<li>Layer 3 - Network (PDU="PACKET")<-(Router-determine the best path(Routing)) [Header Logical addr of sender and receiver]Packet,Assemble /De-assemble</li>
+				<li>Layer 2 - Data Link (PDU="FREAME")<--(Swithch-Bridge),MAC</li>
+				<li>Layer 1 - Physical</li>
+				</B>
+			</ol>	
+			<ol>
+				<li>
+					<img class="img-responsive" src="cn/osi.jpg"/>
+					<img class="img-responsive" src="cn/osi2.png"/>
+					<img class="img-responsive" src="cn/port.png"/>
+				</li>
+			</ol>
+				
+		</li>
+		<li>IPv4 
+			<ol>
+				<li>VER(4): 4,6 </br></li>
+
+				<li>HLEN(4): Min 5 Max 12  </br></li>
+
+				<li>TOS(8)-Type of service: Low Delay, High Throughput, Reliability (8 bits)</br></li>
+
+				<li>Total Length(16): Head+DATA min:20 bytes max:65,535 bytes</br></li>
+
+				<li>Identification(16): Unique Packet Id for identifying the group of
+				fragments of a single IP datagram (16 bits)</br></li>
+
+				<li>Flags(3): if IP Packet is too large to handle, these ‘flags’ tells if they can be fragmented or not. MSB:0</br></li>
+
+				<li>Fragment Offset(13):exact position of the fragment in the original IP Packet.</br></li>
+
+				<li>Time to live(8): how many routers (hops) this packet can cross. At each hop, its value is decremented by one and when the value reaches zero, the packet is discarded.</br></li>
+
+				<li>Protocol(8): Name of proto to which the data is to be passed</br></li>
+
+				<li>Header Checksum(16): if the packet is received error-free.</br></li>
+
+				<li>Source IP address: 32 bits IP address of the sender</br></li>
+
+				<li>Destination IP address: 32 bits IP address of the receiver</br></li>
+
+				<li>Option: Optional information such as source route, record route. Used by the Network administrator to check whether a path is working or not.</br></li>
+				
+				<li>
+					<img class="img-responsive" src="cn/ipv4-hdr.png"/>
+				</li>
+		</ol>
+		</li>
+		<li>Transmission Media
+			<ol>
+				<li>
+					<img class="img-responsive" src="cn/tm.png"/>
+				</li>
+				<li>Fiber Optic
+					<ol>
+						<li>
+							<img class="img-responsive" src="cn/fiberoptic.jpg"/>
+						</li>
+					</ol>	
+				</li>
+				<li>Co-axial Cable
+					<ol>
+						<li>
+							<img class="img-responsive" src="cn/coaxial.jpg"/>
+						</li>
+					</ol>	
+				</li>
+			</ol>		
+		</li>
+		<li>Bandwidth (Max data transfer rate of a given path)</li>
+		<li>Error Checking
+			<ol>
+				<li>Humming Code</li>
+				<li>CRC</li>
+			</ol>
+		</li>
+		<li>Congestion Control
+			<ol>
+				<li>Open Loop
+					<ol>
+						<li>Retransmission</li>
+						<li>ACK Policy</li>
+						<li>Discarding Policy</li>
+						<li>Window Policy</li>
+						<li>Admission Policy</li>
+					</ol>
+				</li>
+				<li>Closed Loop
+					<ol>
+						<li>Back Pressure</li>
+						<li>Choke Packet</li>
+						<li>Implicit signaling</li>
+							<li>Explicit signaling</li>
+					</ol>
+				</li>
+			</ol>
+			<ol>
+				<li>Leaky Bucket Algorithm</li>
+				<li>Token bucket Algorithm</li>
+			</ol>
+		</li>
+		<li>Server
+			<ol>
+				<li>Print</li>
+				<li>File</li>
+				<li>Web Server</li>
+				<li>Database</li>
+				<li>Disk</li>
+			</ol>
+		</li>
+		<li>DHCP
+			<ul>
+				<li>Image
+					<ol>	
+							<li>
+								<img class="img-responsive" src="cn/dhcpworking.jpg" />
+							</li>
+						    <li>
+								<img class="img-responsive" src="cn/dhcp.png" />
+							</li>
+							<li>
+								<img class="img-responsive" src="cn/scope1.png" />
+							</li>
+							<li>
+								<img class="img-responsive" src="cn/scope2.png" />
+							</li>
+					</ol>
+				</li>
+				<li>Id Addres are leased
+				</li>
+				<li>Address Reservation ex, router,net printer ,servers
+				</li>
+			</ul>
+		</li>
+		<li>DNS(Resolver name to number)
+			<ol>
+				<li>
+					<img class="img-responsive" src="cn/dns.png" />
+				</li>
+			</ol>  
+		</li>
+		<li>Stop & Wait Protocol	
+		</li>
+		<li>Class Range
+			<ol>
+				<li>
+					<img class="img-responsive" src="cn/ClassRange.jpg" />
+				</li>
+			</ol>
+		</li>
+		<li>Dijkstra's Algorithm
+			<ol>
+				<li>
+					<img class="img-responsive" src="cn/Dijkstra's.png" />
+				</li>
+			</ol>
+		</li>	
+	</ul>
+	<center><a href="index.html">Back</a></center>
+	</body>
+</html>
